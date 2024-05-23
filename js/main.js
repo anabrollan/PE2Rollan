@@ -14,6 +14,7 @@ function agregarTarea() {
   };
 
   tareas.push(nuevaTarea);
+  console.log("Tarea agregada:", nuevaTarea);
   mostrarListaTareas();
   document.getElementById("nuevaTarea").value = "";
 }
@@ -35,9 +36,11 @@ function mostrarListaTareas() {
     nuevaTarea.appendChild(botonEliminar);
     listaTareas.appendChild(nuevaTarea);
   });
+  console.log("Lista de tareas:", tareas);
 }
 
 function eliminarTarea(indice) {
   tareas.splice(indice, 1); 
+  console.log("Tarea eliminada:", tareaEliminada);
   mostrarListaTareas();
 }
